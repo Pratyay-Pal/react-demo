@@ -2,10 +2,12 @@ import "./NewItem.css";
 import { useState } from "react";
 import Button from '../../UI/Button/Button.js'
 import Card from '../../UI/Card/Card.js'
+import ErrorBox from "../../UI/ErrorBox/ErrorBox";
 
 function NewItem(props) {
   const [enteredText, setEnteredText] = useState("");
   const [isValid, setIsValid] = useState(false);
+  const [error, setError] = useState();
 
   const formTextChangeHandler = (event) => {
     console.log(event.target.value);
@@ -19,12 +21,22 @@ function NewItem(props) {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+    !isValid && setError({
+      title:"ERROR",
+      exception:"Enter Value more than 5 characters"
+    })
     isValid && props.addItem(enteredText);
     isValid && setEnteredText("");
     setIsValid(false);
   };
 
+  const clearError = () => {
+    setError(null);
+  }
+
   return (
+    <>
+    {error && <ErrorBox title={error.title} exception={error.exception} onClearError={clearError}/>}
     <Card className="itemsform">
       <form onSubmit={formSubmitHandler}>
         <input
@@ -43,6 +55,7 @@ function NewItem(props) {
         </Button>
       </form>
     </Card>
+    </>
   );
 }
 
