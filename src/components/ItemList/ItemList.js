@@ -1,4 +1,4 @@
-import Items from "./Items";
+import Items from "../Items/Items";
 import './ItemList.css'
 
 function ItemList(props) {

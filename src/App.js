@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import ItemList from './components/ItemList';
-import NewItem from './components/NewItem';
+import ItemList from './components/ItemList/ItemList';
+import NewItem from './components/NewItem/NewItem';
 
 const initial_items=[
   {

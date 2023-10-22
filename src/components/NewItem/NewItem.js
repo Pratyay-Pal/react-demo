@@ -1,5 +1,7 @@
 import "./NewItem.css";
 import { useState } from "react";
+import Button from '../../UI/Button/Button.js'
+import Card from '../../UI/Card/Card.js'
 
 function NewItem(props) {
   const [enteredText, setEnteredText] = useState("");
@@ -18,12 +20,12 @@ function NewItem(props) {
   const formSubmitHandler = (event) => {
     event.preventDefault();
     isValid && props.addItem(enteredText);
-    setEnteredText("");
+    isValid && setEnteredText("");
     setIsValid(false);
   };
 
   return (
-    <div className="itemsform">
+    <Card className="itemsform">
       <form onSubmit={formSubmitHandler}>
         <input
           type="text"
@@ -32,15 +34,15 @@ function NewItem(props) {
           value={enteredText}
           onChange={formTextChangeHandler}
         />
-        <button
+        <Button
           type="submit"
-          className={`submitButton ${isValid ? "" : "disabled"}`}
+          className={`${isValid ? "" : "disabled"}`}
           onClick={formSubmitHandler}
         >
           SUBMIT
-        </button>
+        </Button>
       </form>
-    </div>
+    </Card>
   );
 }
 
