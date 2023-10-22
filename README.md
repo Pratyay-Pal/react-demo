@@ -6,6 +6,8 @@ Testing features of React. Features present-
 - Addition/Removal
 - Styles
 - Dynamic Styles
+- CSS Modules
+- Error Handling
 
 #### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 `npm start`
