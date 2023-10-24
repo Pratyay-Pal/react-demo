@@ -1,49 +1,36 @@
-import { useState } from 'react';
-import './App.css';
-import ItemList from './components/ItemList/ItemList';
-import NewItem from './components/NewItem/NewItem';
-
-const initial_items=[
-  {
-    id:'1',
-    value:'Item 1'
-  },
-  {
-    id:'2',
-    value:'Item 2'
-  }
-]
+import React, { useState } from "react";
+import classes from "./App.module.css";
+import AddingListingItems from "./content/AddingListingItems/AddingListingItems";
+import Button from "./UI/Button/Button";
+import ExpenseTracker from "./content/Expenses/ExpenseTracker";
+import TimerController from "./content/Timer/TimerController/TimerController";
 
 function App() {
-  const[items, setItems] = useState(initial_items);
+  const [content, setContent] = useState();
 
-  const deleteItemHandler = id => {
-    console.log(id)
-    setItems(prevItems => {
-      const updatedItems = prevItems.filter(item => item.id !== id);
-      return updatedItems;
-    });
-  };
-
-  const addItemHandler = value => {
-    console.log(value)
-    setItems(prevItems => {
-      const newitem = {id:Math.random().toString(), value:value}
-      console.log(newitem)
-      const updatedItems = [newitem,...prevItems];
-      return updatedItems;
-    });
-  };
+  const headerClickHandler = (whichContent) => {
+    if (whichContent === "addlist"){
+      setContent(<AddingListingItems/>);
+    }
+    else if (whichContent === "timer"){
+      setContent(<TimerController/>);
+    }
+    else if (whichContent === "expense"){
+      setContent(<ExpenseTracker/>);
+    }
+  }
 
   return (
-    <div>
-      <div>
-        <NewItem addItem={addItemHandler}/>
+    <React.Fragment>
+      <div className={classes.header}>
+        <div className={classes.headercontent}>
+          <Button className={classes.button} onClick={() => headerClickHandler("addlist")}>Adding and Listing Items</Button>
+          <Button className={classes.button} onClick={() => headerClickHandler("timer")}>Timer</Button>
+          <Button className={classes.button} onClick={() => headerClickHandler("expense")}>Expense Tracker(Udemy)</Button>
+        </div>
       </div>
-      <div>
-        <ItemList items={items} deleteItem={deleteItemHandler}/>        
-      </div>
-    </div>
+      {content}
+    </React.Fragment>
   );
 }
 
