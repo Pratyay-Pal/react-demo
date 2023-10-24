@@ -19,6 +19,11 @@
   background-color: #f3f3f4;
   color: #0d0c22;
   transition: 0.3s ease;
+  margin: 10px 0px;
+  outline: none;
+  border-color: rgb(101, 101, 101);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(178, 178, 178, 0.1);
 }
 
 .inputtext::placeholder {
