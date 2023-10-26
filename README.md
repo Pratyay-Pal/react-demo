@@ -9,7 +9,11 @@ Testing features of React. Features present-
 - CSS Modules
 - Error Handling
 - Refs
+- ForwardRefs
+- Imperative Handles
 - Portals
+- Modals
+- Timer
 
 #### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 `npm start`
