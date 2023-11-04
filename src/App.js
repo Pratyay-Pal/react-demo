@@ -4,6 +4,7 @@ import AddingListingItems from "./content/AddingListingItems/AddingListingItems"
 import Button from "./UI/Button/Button";
 import ExpenseTracker from "./content/Expenses/ExpenseTracker";
 import TimerController from "./content/Timer/TimerController/TimerController";
+import TicTacToe from "./content/TicTacToe/TicTacToe";
 
 function App() {
   const [content, setContent] = useState();
@@ -18,6 +19,9 @@ function App() {
     else if (whichContent === "expense"){
       setContent(<ExpenseTracker/>);
     }
+    else if (whichContent === "tictactoe"){
+      setContent(<TicTacToe/>);
+    }
   }
 
   return (
@@ -27,6 +31,7 @@ function App() {
           <Button className={classes.button} onClick={() => headerClickHandler("addlist")}>Adding and Listing Items</Button>
           <Button className={classes.button} onClick={() => headerClickHandler("timer")}>Timer</Button>
           <Button className={classes.button} onClick={() => headerClickHandler("expense")}>Expense Tracker(Udemy)</Button>
+          <Button className={classes.button} onClick={() => headerClickHandler("tictactoe")}>Tic Tac Toe</Button>
         </div>
       </div>
       {content}
