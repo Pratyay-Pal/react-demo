@@ -13,7 +13,12 @@
 
 .playercardcontent {
   display: flex;
-  justify-content: center;
+  justify-content: center;  
+}
+
+.playercardactive{
+  border-style: solid;
+  border-color: black;
 }
 
 .playername {

@@ -2,6 +2,7 @@
 
 Testing features of React. Features present-
 - States
+- Transferring State
 - Keys
 - Addition/Removal
 - Styles
@@ -14,6 +15,12 @@ Testing features of React. Features present-
 - Portals
 - Modals
 - Timer
+
+POC Projects-
+- Listing items
+- Timer
+- Expense
+- TicTacToe
 
 #### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 `npm start`
