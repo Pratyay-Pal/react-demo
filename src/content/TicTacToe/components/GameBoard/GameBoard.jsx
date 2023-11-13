@@ -1,12 +1,12 @@
 import classes from "./GameBoard.module.css";
 
-const initialBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
+// const initialBoard = [
+//   [null, null, null],
+//   [null, null, null],
+//   [null, null, null],
+// ];
 
-export default function GameBoard({boardStateLog, squareCLicked}) {
+export default function GameBoard({board, squareCLicked}) {
 //REMOVED TO PREVENT REPLICATION OF INFO
 // const [newBoard, setNewBoard] = useState(initialBoard)
 
@@ -18,10 +18,10 @@ export default function GameBoard({boardStateLog, squareCLicked}) {
 //         return updatedBoard;
 //     })    
 // }
-let board = initialBoard;
-for(const stateLog of boardStateLog){
-  board[stateLog.coordinate.x][stateLog.coordinate.y] = stateLog.symbol;
-}
+// let board = initialBoard;
+// for(const stateLog of boardStateLog){
+//   board[stateLog.coordinate.x][stateLog.coordinate.y] = stateLog.symbol;
+// }
 
   return (
     <div>
@@ -31,7 +31,7 @@ for(const stateLog of boardStateLog){
             <ol>
               {row.map((col, colIndex) => (
                 <li key={colIndex}>
-                  <button onClick={() => squareCLicked(rowIndex, colIndex)}>{col}</button>
+                  <button onClick={() => squareCLicked(rowIndex, colIndex)} disabled={col !== null}>{col}</button>
                 </li>
               ))}
             </ol>
