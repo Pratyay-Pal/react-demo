@@ -1,0 +1,44 @@
+.shoppingbg {
+    margin: 10px 0 0 0;
+    font-family: 'Merriweather', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #f3e7d4;
+    min-height: 100vh;
+  }
+  
+
+.mainheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 15% 1rem 15%;
+}
+
+.maintitle {
+  display: flex;
+  align-items: center;
+}
+
+.mainheader h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #000c78;
+  text-shadow: 0 0 4px rgba(35, 34, 34, 0.4);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.mainheader button {
+  background: #edbf68;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  color: #201e1a;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.mainheader button:hover {
+  background: #f5b744;
+}
