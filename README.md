@@ -15,6 +15,10 @@ Testing features of React. Features present-
 - Portals
 - Modals
 - Timer
+- Context Provider
+- Context Variables
+- Context Functions
+- Context Consumer
 
 POC Projects-
 - Listing items

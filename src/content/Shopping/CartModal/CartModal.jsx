@@ -5,7 +5,7 @@ import Cart from "../Cart/Cart";
 export default function CartModal({ changeCart }) {
   return createPortal(
     <>
-      <div className={classes.backdrop} onClick={changeCart}>
+      <div className={classes.backdrop}>
         <div className={classes.modal}>
           <div className={classes.card}>
             <h1>Items in Cart</h1>

@@ -9,6 +9,7 @@
   }
   
   .modal {
+    position: relative;
     display: flex;    
     z-index: 100;
     overflow: hidden;

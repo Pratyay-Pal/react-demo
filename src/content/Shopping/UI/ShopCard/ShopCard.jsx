@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import classes from "./ShopCard.module.css";
+import { CartContext } from "../../ContextStore/cartContext";
 
-export default function Card({title, price, description, onAddToCart}) {
+export default function Card({id, title, price, description}) {
+  const {onAddToCart} = useContext(CartContext);
   return (
     <>
       <div className={classes.card}>
@@ -11,7 +14,7 @@ export default function Card({title, price, description, onAddToCart}) {
             <p>${price}</p>
           </div>
         </div>
-        <button onClick={onAddToCart}>Add to Cart</button>
+        <button onClick={() => onAddToCart(id)}>Add to Cart</button>
       </div>
     </>
   );

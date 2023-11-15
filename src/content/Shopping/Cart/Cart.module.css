@@ -1,10 +1,9 @@
 .card {
   display: flex;
-  width: 70rem;
+  width: 60rem;
   height: fit-content;
   border-radius: 20px 0 0 20px;
   background: #212121;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
 }
 
 .card h1 {
@@ -24,12 +23,13 @@
   margin-left: 2rem;
   margin-bottom: 3rem;
   margin-right: 2rem;
+  border-radius: 20px;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
 }
 
-.plusbutton {
+.changeqtybutton {
   background: #ffffff;
   border: none;
-  border-radius: 0 20px 20px 0;
   color: #201e1a;
   font-size: 1.25rem;
   cursor: pointer;
@@ -39,24 +39,10 @@
   padding: 0 20px 0 20px;
 }
 
-.minusbutton {
-  background: #ffffff;
-  border: none;
-  color: #201e1a;
-  font-size: 1.25rem;
-  cursor: pointer;
-  float: right;
-  font-family: monospace;
-  font-size: 50px;
-  padding: 0 20px 0 20px;
-}
-
 .quantitybutton{
     background: #ffffff;
   border: none;
   color: #201e1a;
-  font-size: 1.25rem;
-  cursor: pointer;
   float: right;
   font-family: monospace;
   font-size: 16px;
@@ -81,4 +67,12 @@
   font-family: monospace;
   padding-top: 10px;
   font-size: 15px;
+}
+
+.totalSum{
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 30px;
+  color: wheat;
 }

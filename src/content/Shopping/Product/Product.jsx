@@ -1,8 +1,8 @@
 import Card from '../UI/ShopCard/ShopCard';
 import classes from './Product.module.css'
 
-export default function Product({productItem, onAddToCart}){
+export default function Product({productItem}){
     return(<>
-    <Card title={productItem.title} price={productItem.price} description={productItem.description} onAddToCart={onAddToCart}></Card>
+    <Card id={productItem.id} title={productItem.title} price={productItem.price} description={productItem.description}></Card>
     </>);
 }
