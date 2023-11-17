@@ -19,6 +19,7 @@ Testing features of React. Features present-
 - Context Variables
 - Context Functions
 - Context Consumer
+- Reducer
 
 POC Projects-
 - Listing items
