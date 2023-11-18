@@ -6,6 +6,7 @@ import ExpenseTracker from "./content/Expenses/ExpenseTracker";
 import TimerController from "./content/Timer/TimerController/TimerController";
 import TicTacToe from "./content/TicTacToe/TicTacToe";
 import Shopping from "./content/Shopping/Shopping";
+import VacationFinder from "./content/VacationFinder/VacationFinder";
 
 function App() {
   const [content, setContent] = useState();
@@ -26,6 +27,9 @@ function App() {
     else if (whichContent === "shopping"){
       setContent(<Shopping/>);
     }
+    else if (whichContent === "vacation"){
+      setContent(<VacationFinder/>);
+    }
   }
 
   return (
@@ -37,6 +41,7 @@ function App() {
           <Button className={classes.button} onClick={() => headerClickHandler("expense")}>Expense Tracker(Udemy)</Button>
           <Button className={classes.button} onClick={() => headerClickHandler("tictactoe")}>Tic Tac Toe</Button>
           <Button className={classes.button} onClick={() => headerClickHandler("shopping")}>Shopping</Button>
+          <Button className={classes.button} onClick={() => headerClickHandler("vacation")}>Vacation Finder</Button>
         </div>
       </div>
       {content}
