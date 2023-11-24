@@ -3,7 +3,7 @@ import classes from "./VacationFinder.module.css";
 import LocationCard from "./LocationCard/LocationCard";
 import DestinationContextProvider, { selectedDestinationContext } from './ContextStore/DestinationCtx';
 
-export default function VacationFinder() {    
+export default function VacationFinder() {  
 
   return (
     <>

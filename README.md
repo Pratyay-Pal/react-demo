@@ -20,6 +20,10 @@ Testing features of React. Features present-
 - Context Functions
 - Context Consumer
 - Reducer
+- useEffect
+- Navigator
+- Local Storage
+- useCallback
 
 POC Projects-
 - Listing items
