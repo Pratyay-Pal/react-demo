@@ -24,6 +24,10 @@ Testing features of React. Features present-
 - Navigator
 - Local Storage
 - useCallback
+- Sending GET/POST Requests
+- Axios
+- Loading handler
+- Error handler
 
 POC Projects-
 - Listing items
@@ -32,6 +36,8 @@ POC Projects-
 - TicTacToe
 - Shopping
 - Vacation Finder
+- GPU shopping(frontend : https://github.com/Pratyay-Pal/gpu-shop-frontend)
+- GPU shopping(backend : https://github.com/Pratyay-Pal/gpu-shop-backend)
 
 #### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 `npm start`
