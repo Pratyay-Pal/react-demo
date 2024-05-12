@@ -7,6 +7,8 @@ import TimerController from "./content/Timer/TimerController/TimerController";
 import TicTacToe from "./content/TicTacToe/TicTacToe";
 import Shopping from "./content/Shopping/Shopping";
 import VacationFinder from "./content/VacationFinder/VacationFinder";
+import UserForm from "./content/UserForms/Login/UserForm";
+import SignUp from "./content/UserForms/SignUp/SignUp";
 
 function App() {
   const [content, setContent] = useState();
@@ -30,6 +32,12 @@ function App() {
     else if (whichContent === "vacation"){
       setContent(<VacationFinder/>);
     }
+    else if (whichContent === "userform"){
+      setContent(<UserForm/>);
+    }
+    else if (whichContent === "signUp"){
+      setContent(<SignUp/>);
+    }
   }
 
   return (
@@ -42,6 +50,8 @@ function App() {
           <Button className={classes.button} onClick={() => headerClickHandler("tictactoe")}>Tic Tac Toe</Button>
           <Button className={classes.button} onClick={() => headerClickHandler("shopping")}>Shopping</Button>
           <Button className={classes.button} onClick={() => headerClickHandler("vacation")}>Vacation Finder</Button>
+          <Button className={classes.button} onClick={() => headerClickHandler("userform")}>User Form</Button>
+          <Button className={classes.button} onClick={() => headerClickHandler("signUp")}>Sign Up</Button>
         </div>
       </div>
       {content}

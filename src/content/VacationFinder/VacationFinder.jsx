@@ -1,7 +1,6 @@
-import { useContext, useState } from "react";
 import classes from "./VacationFinder.module.css";
 import LocationCard from "./LocationCard/LocationCard";
-import DestinationContextProvider, { selectedDestinationContext } from './ContextStore/DestinationCtx';
+import DestinationContextProvider from './ContextStore/DestinationCtx';
 
 export default function VacationFinder() {  
 

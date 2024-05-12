@@ -1,5 +1,4 @@
 import Card from '../UI/ShopCard/ShopCard';
-import classes from './Product.module.css'
 
 export default function Product({productItem}){
     return(<>
